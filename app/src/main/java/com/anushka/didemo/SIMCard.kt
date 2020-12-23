@@ -1,18 +1,12 @@
 package com.anushka.didemo
 
 import android.util.Log
+import javax.inject.Inject
 
-class SIMCard() {
-
-    private lateinit var serviceProvider: ServiceProvider
+class SIMCard @Inject constructor(private val serviceProvider: ServiceProvider) {
 
     init {
         Log.i("MYTAG","SIM Card Constructed")
-    }
-
-    // Method injection
-    fun setServiceProvider(serviceProvider: ServiceProvider) {
-        this.serviceProvider = serviceProvider
     }
 
     fun getConnection(){
