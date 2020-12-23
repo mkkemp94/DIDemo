@@ -2,7 +2,9 @@ package com.anushka.didemo
 
 import dagger.Component
 import dagger.Provides
+import javax.inject.Singleton
 
+@Singleton
 @Component(modules = [MemoryCardModule::class, NCBatteryModule::class])
 interface SmartPhoneComponent {
 
