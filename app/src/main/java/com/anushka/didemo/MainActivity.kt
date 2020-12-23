@@ -9,5 +9,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val battery = Battery()
+        val memoryCard = MemoryCard()
+        val serviceProvider = ServiceProvider()
+        val simCard = SIMCard()
+        simCard.setServiceProvider(serviceProvider)
+        val smartPhone = SmartPhone(battery, simCard, memoryCard)
+        smartPhone.makeACallWithRecording()
+
     }
 }
