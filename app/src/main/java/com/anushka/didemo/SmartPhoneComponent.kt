@@ -6,6 +6,7 @@ import dagger.Provides
 @Component(modules = [MemoryCardModule::class, NCBatteryModule::class])
 interface SmartPhoneComponent {
 
-    fun getSmartPhone() : SmartPhone
+    // Now MainActivity will get everything in the graph
+    fun inject(mainActivity: MainActivity)
 
 }
